@@ -1,0 +1,23 @@
+----Assignment 0----
+In the program we have 3 fork calls and in the if else statement we have prints. When we do a = fork(), the value of a is the pid of the child process created. 
+If it's 0 then we know that it's a child process, if it's any other number then it's the parent process. Inside the print statements we are printing the pid
+of the process calling the print as well as the pid of it's parent. Total we see 14 print calls since we have 2 print calls after the first fork 4 after the 
+second and 8 after that, totaling 14. The process tree has a total of 8 processes running after the 3 forks.
+
+----Assignment 1----
+Here we initially call fork() and the same way as in assignment 0, we determine if it's a child we call execl and run the ls program. The fork call creates a 
+copy of our program and execl replaces it with ls which gets called first since we have a wait(NULL) statement which the parent executes causing it to wait
+until the child is terminated to continue printing its line.
+
+----Assignment 2----
+For this one it's similar to the assignment 1, but we call two forks since we need to execute two different programs in the child processes. Two fork calls
+should give us a total of 4 processes, but it gives us 3 since the child created after the first fork calls the execl function which replaces it with the ls program,
+causing it not call the other fork. In the same way the after the other fork the next child calls the date program and the parent waits for both of them with the help
+of two waitpid() function which we use to wait for the specific processes to be terminated before continuing and printing the final statement that the parent is done.
+
+----Assignment 3----
+This is also the same thing as assignment 1, the only difference is that in the execl function we execute the echo program and pass it the argument "Hello...", which
+tells the echo to print it back to the terminal.
+
+----Assignment 4----
+Also the same as assignment 1, but now we call the grep program which searches the text file for any lines containing the word "main" in it and prints it.
