@@ -4,7 +4,7 @@
 int main() {
   int n = 3;
 
-  char **arr = calloc(n, sizeof(char *));
+  char **arr = malloc(n * sizeof(char *));
   if (arr == NULL) {
     printf("Not good\n");
     return 1;
