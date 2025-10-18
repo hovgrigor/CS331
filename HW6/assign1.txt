@@ -1,0 +1,20 @@
+Size of int: 4 bytes
+Size of char: 1 bytes
+Size of double: 8 bytes
+Size of short: 2 bytes
+
+Address of int a: 0x7fff6eb76bfc
+Address of char b: 0x7fff6eb76bf9
+Address of double c: 0x7fff6eb76c00
+Address of short d: 0x7fff6eb76bfa
+
+
+We can see the sizes of different types of variables.
+In the addresses we can see that all of them are a divisible of the size of their respective types.
+
+Fc -> 252 / 4 (int) = 63 
+F9 -> 249 / 1 (char) = 249 (no padding needed here)
+00 -> 0 / 8 (double) = 0
+Fa -> 250 / 2 (short) = 125
+
+As we can see there are paddings between the variables to ensure they are correctly positioned.

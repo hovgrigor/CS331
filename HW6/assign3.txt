@@ -1,0 +1,39 @@
+=== Normal Struct (no packing) ===
+Size: 24 bytes
+Address of int: 0x7ffc8560ed40
+Address of double: 0x7ffc8560ed48
+Address of char: 0x7ffc8560ed50
+
+=== pack(1) ===
+Size: 13 bytes
+Address of int: 0x7ffc8560ed13
+Address of double: 0x7ffc8560ed17
+Address of char: 0x7ffc8560ed1f
+
+=== pack(2) ===
+Size: 16 bytes
+Address of int: 0x7ffc8560ed20
+Address of double: 0x7ffc8560ed24
+Address of char: 0x7ffc8560ed2c
+
+=== pack(4) ===
+Size: 16 bytes
+Address of int: 0x7ffc8560ed30
+Address of double: 0x7ffc8560ed34
+Address of char: 0x7ffc8560ed3c
+
+=== Normal Struct (no packing) ===
+
+In the first one we have int (4 bytes) at 40 then 4 bytes of padding, then double (8 bytes) at 48, then char (1 byte) at 50 followed by 7 bytes of padding to make total 24 bytes.
+
+=== pack(1) ===
+
+In the pack(1) version we have int (4 bytes) at 0, then double (8 bytes) at 4, then char (1 byte) at 12, with no padding — total 13 bytes.
+
+=== pack(2) ===
+
+In the pack(2) version we have int (4 bytes) at 0, then double (8 bytes) at 4, then char (1 byte) at 12, followed by 3 bytes of padding — total 16 bytes.
+
+=== pack(4) ===
+
+In the pack(4) version we have int (4 bytes) at 0, then double (8 bytes) at 4, then char (1 byte) at 12, followed by 3 bytes of padding — total 16 bytes.
